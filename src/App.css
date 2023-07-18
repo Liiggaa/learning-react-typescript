@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: "Lato", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f8f9fa;
+  border-bottom: 1.6rem solid #495057;
   min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.gallery{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color:#212529;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.gallery h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menu > p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+  width: 80%;
 }
+
+   .imgGallery{
+    width: 90%;
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    row-gap: 0;
+    padding: 1rem;
+  }
+
+  .imgGallery img {
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    display: block;
+    transition: all 100ms ease-out;
+  }
+
+  .imgGallery img:hover {
+    transform: scale(1.04);
+  }
